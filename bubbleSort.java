@@ -7,7 +7,7 @@ public class bubbleSort {
 		array[j] = temp;
 	}
 	
-	public static void swap(double[] array, double i, double j) {
+	public static void swap(double[] array, int i, int j) {
 		double temp = array[i];
 		array[i] = array[j];
 		array[j] = temp;
