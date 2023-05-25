@@ -1,3 +1,5 @@
+package Sorting;
+
 public class bubbleSort {
 	public static void swap(int[] array, int i, int  j) {
 		int temp = array[i];
@@ -10,24 +12,46 @@ public class bubbleSort {
 		array[i] = array[j];
 		array[j] = temp;
 	}
-  
-	public static void main(String[] args) {
-		int[] numbers = {23, 43, 1, 4, 90, 3, 27, 11};
+	
+	public static void bubbleSort(int[] arr) {
 		boolean swapped;
 		int swappedCounter = 0;
-		 do {
+		do {
 			 swapped = false;
-			 for(int i = 0; i < numbers.length - 1; i++) {
-				 if(numbers[i] > numbers[i+1]) {
-					 swap(numbers, i,i + 1);
+			 for(int i = 0; i < arr.length - 1; i++) {
+				 if(arr[i] > arr[i+1]) {
+					 swap(arr, i,i + 1);
 					 swapped = true;
 					 swappedCounter++;
 				 }
 			 }
 		 }while(swapped);
-		 
-		 for(int i : numbers) {
+		
+		for(int i : arr) {
 			 System.out.print(i+" ");
 		 }
+	}
+	
+	public static void bubbleSort(double[] arr) {
+		boolean swapped;
+		int swappedCounter = 0;
+		do {
+			 swapped = false;
+			 for(int i = 0; i < arr.length - 1; i++) {
+				 if(arr[i] > arr[i+1]) {
+					 swap(arr, i,i + 1);
+					 swapped = true;
+					 swappedCounter++;
+				 }
+			 }
+		 }while(swapped);
+		
+		for(double i : arr) {
+			 System.out.print(i+" ");
+		 }
+	}
+	public static void main(String[] args) {
+		int[] numbers = {23, 43, 1, 4, 90, 3, 27, 11, 21};
+		bubbleSort(numbers);
 	}
 }
