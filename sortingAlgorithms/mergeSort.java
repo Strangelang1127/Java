@@ -23,7 +23,6 @@ public class mergeSort {
         int i = left;
         int j = mid + 1;
         int k = left;
-        int inversions = 0;
         while (i <=  mid && j <= right) {
             if (temporaryArray[i] <= temporaryArray[j]) {
                 array[k] = temporaryArray[i];
@@ -31,7 +30,6 @@ public class mergeSort {
             }else{
                 array[k] = temporaryArray[j];
                 j++;
-                inversions += (mid - i + 1);
             }
             k++;
         }
@@ -46,7 +44,7 @@ public class mergeSort {
             k++;
         }
     }
-  
+    
     public static void main(String[] args) {
         int[] arrayOfNumbers = {23, 43, 1, 4, 90, 3, 27, 11, 21};
         mergeSorting(arrayOfNumbers);
